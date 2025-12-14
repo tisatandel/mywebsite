@@ -1,0 +1,44 @@
+.category-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 25px;
+}
+
+.category-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.category-card {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 220px;
+  padding: 16px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+.category-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.btn-category {
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-category:hover {
+  background: #218838;
+}
