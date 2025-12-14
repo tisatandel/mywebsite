@@ -1,18 +1,23 @@
 .navbar {
   background-color: #7ccf8d; /* Light Green */
+  min-height: 80px; /* Bada header */
 }
 
 .navbar-brand {
-  font-size: 22px;
+  font-size: 28px; /* Logo thoda bada */
 }
 
 .nav-link {
   color: white !important;
   font-weight: 500;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: #004d26 !important;
+}
+
+.navbar-nav .nav-item {
+  padding: 5px 0;
 }

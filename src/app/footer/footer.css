@@ -1,0 +1,16 @@
+footer {
+  background-color: #7ccf8d; /* Light Green */
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #004d26 !important;
+}
+
+footer h3, footer h5 {
+  color: white;
+}
+
+footer p, footer a {
+  font-size: 14px;
+}
