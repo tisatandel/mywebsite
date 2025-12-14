@@ -1,0 +1,18 @@
+.navbar {
+  background-color: #7ccf8d; /* Light Green */
+}
+
+.navbar-brand {
+  font-size: 22px;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #004d26 !important;
+}
