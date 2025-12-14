@@ -9,13 +9,24 @@
   align-items: center;
   background: #f4fff7;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 18px;
   margin-bottom: 40px;
+  transition: transform 0.3s;
+}
+
+.welcome-card:hover {
+  transform: translateY(-5px);
 }
 
 .welcome-card img {
-  width: 320px;
+  width: 500px;
+  height:auto;
   border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.welcome-card img:hover {
+  transform: scale(1.05);
 }
 
 .welcome-text h2 {
@@ -23,83 +34,101 @@
   margin-bottom: 15px;
 }
 
-.welcome-text ul {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-.welcome-text li {
-  margin-bottom: 8px;
-}
-
-/* Hero Section */
+/* Hero */
 .hero {
   text-align: center;
   background: #7ccf8d;
   color: white;
-  padding: 50px 20px;
-  border-radius: 15px;
-  margin-bottom: 40px;
+  padding: 55px 20px;
+  border-radius: 18px;
+  margin-bottom: 45px;
 }
 
 .hero button {
-  background: #ffffff;
+  background: white;
   color: #2f7d32;
   border: none;
-  padding: 12px 25px;
-  font-size: 16px;
+  padding: 12px 28px;
   border-radius: 25px;
-  cursor: pointer;
   margin-top: 15px;
+  cursor: pointer;
 }
 
 .hero button:hover {
-  background: #e8ffe8;
+  background: #eaffea;
 }
 
 /* Grocery Grid */
 .grocery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .grocery-card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 15px;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grocery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
 
 .grocery-card img {
   width: 100%;
-  height: 160px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
+  transition: transform 0.3s;
 }
 
-/* Info Section */
-.info-section {
+.grocery-card img:hover {
+  transform: scale(1.07);
+}
+
+/* WHY SECTION */
+.why-section {
+  background: linear-gradient(135deg, #eafff1, #d9f5e5);
+  padding: 50px 30px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+.why-section h2 {
   text-align: center;
-  margin-bottom: 25px;
+  color: #2f7d32;
+  margin-bottom: 15px;
 }
 
-.info-section h2 {
-  color: #2f7d32;
+.why-section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 35px;
 }
 
 /* Info Cards */
 .info-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
 }
 
 .info-card {
-  background: #f4fff7;
-  padding: 25px;
-  border-radius: 15px;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  min-height: 260px; /* height zyada */
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
