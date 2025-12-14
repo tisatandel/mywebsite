@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { RouterModule } from "@angular/router";
 
 @Component({
-  selector: 'app-categories',
+  selector: 'app-grocery-hub',
   imports: [RouterModule],
-  templateUrl: './categories.html',
-  styleUrl: './categories.css',
+  templateUrl: './grocery-hub.html',
+  styleUrl: './grocery-hub.css',
 })
-export class Categories {
+export class GroceryHub {
 
 }

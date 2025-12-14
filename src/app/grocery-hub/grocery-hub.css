@@ -1,0 +1,99 @@
+.groceryhub-container {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.groceryhub-container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.groceryhub-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.groceryhub-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Individual Card */
+.groceryhub-card {
+  background: #fff;
+  width: 260px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.groceryhub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.groceryhub-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.groceryhub-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.groceryhub-card button {
+  padding: 8px 15px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.btn-admin {
+  background-color: #28a745;
+}
+
+.btn-admin:hover {
+  background-color: #218838;
+}
+
+.btn-customer {
+  background-color: #007bff;
+}
+
+.btn-customer:hover {
+  background-color: #0069d9;
+}
+
+.btn-supplier {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-supplier:hover {
+  background-color: #e0a800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .groceryhub-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .groceryhub-card {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}
