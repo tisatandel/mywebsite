@@ -1,5 +1,6 @@
 <section class="contact-page">
 
+  <!-- Header -->
   <div class="contact-header">
     <h1>Contact Green Basket</h1>
     <p>We’re here to help you with fresh groceries and happy service 💚</p>
@@ -12,44 +13,56 @@
       <h2>Get in Touch</h2>
 
       <form>
-        <input type="text"
-               placeholder="Your Name"
-               [(ngModel)]="nameInput"
-               name="name">
-               @if (nameInput && nameInput.length < 3) {
-      <small style="color:red">
-        Name must be at least 3 characters
-      </small>
-    }
 
-        <input type="email"
-               placeholder="Your Email"
-               [(ngModel)]="emailInput"
-               name="email">
+        <!-- Name -->
+        <input
+          type="text"
+          placeholder="Your Name"
+          [(ngModel)]="nameInput"
+          name="name">
+        @if (nameInput && nameInput.length < 3) {
+          <small style="color:red">Name must be at least 3 characters</small>
+        }
 
-        <input type="text"
-               placeholder="Subject"
-               [(ngModel)]="subjectInput"
-               name="subject">
+        <!-- Email -->
+        <input
+          type="email"
+          placeholder="Your Email"
+          [(ngModel)]="emailInput"
+          name="email">
 
-        <textarea rows="4"
-                  placeholder="Your Message"
-                  [(ngModel)]="messageInput"
-                  name="message"></textarea>
-                  @if (messageInput && messageInput.length < 10) {
-      <small style="color:red">
-        Message must be at least 10 characters
-      </small>
-    }
+        <!-- Subject -->
+        <input
+          type="text"
+          placeholder="Subject"
+          [(ngModel)]="subjectInput"
+          name="subject">
 
-        <button type="button" (click)="add()">Send Message</button>
+        <!-- Message -->
+        <textarea
+          rows="4"
+          placeholder="Your Message"
+          [(ngModel)]="messageInput"
+          name="message"></textarea>
+        @if (messageInput && messageInput.length < 10) {
+          <small style="color:red">Message must be at least 10 characters</small>
+        }
+
+        <!-- Button -->
+        <button
+          type="button"
+          (click)="add()"
+          [style.backgroundColor]="buttonColor"
+          style="color:white; padding:12px 20px; border:none; border-radius:6px;">
+          {{ editIndex === null ? 'Send Message' : 'Update Message' }}
+        </button>
+
       </form>
     </div>
 
     <!-- Contact Info -->
     <div class="contact-info">
       <h2>Contact Details</h2>
-
       <p>📍 Address: Green Basket, Fresh Market Road, India</p>
       <p>📞 Phone: +91 98765 43210</p>
       <p>📧 Email: support@greenbasket.com</p>
@@ -60,12 +73,15 @@
         <p>Sunday: 9 AM – 6 PM</p>
       </div>
     </div>
-</div>
-    <!-- Table Section -->
-    <div class="table-section">
-      <h2>📋 Submitted Messages</h2>
 
-      <table border="1" width="100%">
+  </div>
+
+  <!-- Table Section -->
+  <div class="table-section">
+    <h2>📋 Submitted Messages</h2>
+
+    <table border="1" width="100%">
+      <thead>
         <tr>
           <th>Name</th>
           <th>Email</th>
@@ -73,14 +89,15 @@
           <th>Message</th>
           <th>Action</th>
         </tr>
+      </thead>
 
+      <tbody>
         @if (messages.length === 0) {
-    <tr>
-      <td colspan="4" style="text-align:center;">
-        No data available
-      </td>
-    </tr>
-  }
+          <tr>
+            <td colspan="5" style="text-align:center;">No data available</td>
+          </tr>
+        }
+
         @for (msg of messages; track $index) {
           <tr>
             <td>{{ msg.name }}</td>
@@ -88,11 +105,14 @@
             <td>{{ msg.subject }}</td>
             <td>{{ msg.message }}</td>
             <td>
-              <button (click)="delete($index)">Delete</button> &nbsp;&nbsp;&nbsp;&nbsp;
               <button (click)="edit($index)">Edit</button>
+              &nbsp;
+              <button (click)="delete($index)">Delete</button>
             </td>
           </tr>
         }
-      </table>
-    </div>
-  <section>
+      </tbody>
+    </table>
+  </div>
+
+</section>
