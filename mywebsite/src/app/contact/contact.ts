@@ -80,7 +80,7 @@ export class Contact implements
     }, 3000);
   }
 
-  // Add / Update message
+ 
   add() {
     if (this.editIndex === null) {
       this.messages.push({
@@ -99,7 +99,7 @@ export class Contact implements
       this.editIndex = null;
     }
 
-    // Clear form
+    
     this.nameInput = '';
     this.emailInput = '';
     this.subjectInput = '';
